@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Sqlite (Xerial) - spotkania.db" uuid="d378d6ae-10de-48c1-8e46-0c4ae752b1b0">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="activity" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="day" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="start" sqlType="TIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="end" sqlType="TIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="user_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <primary-key columns="id),foreign key(user_id"/>
+      <foreign-key name="#FAKE_activity_1" columns="user_id" ref-table="user" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+    <table name="user" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="surname" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="hashPassword" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <exported-key name="#FAKE_activity_1" table="activity" schema="" catalog="" columns="user_id"/>
+      <exported-key name="#FAKE_activity_1" table="activity" schema="" catalog="" columns="user_id"/>
+      <exported-key name="#FAKE_activity_1" table="activity" schema="" catalog="" columns="user_id"/>
+      <exported-key name="#FAKE_activity_1" table="activity" schema="" catalog="" columns="user_id"/>
+    </table>
+  </data-source>
+</component>
